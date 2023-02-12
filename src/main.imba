@@ -84,28 +84,55 @@
 # 		console.log "keep it up"
 
 
-# section 4 Loops
+# # section 4 Loops
 
-const habits = ["clean", "run", "study"]
+# const habits = ["clean", "run", "study"]
 
-for habit, index in habits
-	console.log "{index + 1}: {habit}"
+# for habit, index in habits
+# 	console.log "{index + 1}: {habit}"
 
-for num in [2...5]
-	console.log num
+# for num in [2...5]
+# 	console.log num
 
-# Challenge:
-# Print out 3 days worth of this habit worksheet:
-#
-# Day 1
-# [ ] clean
-# [ ] run
-# [ ] study
-# Day 2
-# [ ] clean
-# [ ] run
-# ...
-for num in [0...3]
-	console.log "Day {num + 1}"
+# # Challenge:
+# # Print out 3 days worth of this habit worksheet:
+# #
+# # Day 1
+# # [ ] clean
+# # [ ] run
+# # [ ] study
+# # Day 2
+# # [ ] clean
+# # [ ] run
+# # ...
+# for num in [0...3]
+# 	console.log "Day {num + 1}"
+# 	for habit in habits
+# 		console.log "[ ] {habit}"
+
+# Section 5 Functions
+
+def createHabit name, done = false
+	const timestamp = Date.now!
+	{name: name, done: false, createdAt: timestamp}
+# function createHabit(name, done = false){
+# 	const timestamp = Date.now();
+# 	return {name = name, done = false, createdAt: timestamp};
+# };
+console.log createHabit("Clean Up")
+console.log createHabit! "Study"
+
+def check habit do if habit.done then "[x]" else "[ ]"
+def prettyHabit habit do "{check(habit)} {habit.name}"
+
+const myHabits = [
+	createHabit("Clean up", true)
+	createHabit("Excercise", false)
+	createHabit("Eat Healthy", true)
+]
+
+def printHabits habits
 	for habit in habits
-		console.log "[ ] {habit}"
+		console.log prettyHabit(habit)
+
+printHabits myHabits
