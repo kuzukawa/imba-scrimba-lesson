@@ -139,4 +139,23 @@
 
 # printHabits myHabits
 
+# # -------------------------------------------------------------
+# # Section 6 Anmonymous Functions
 
+# const greeting = function(name){
+# 	return "Hello " + name
+# }
+
+const greeting = do(name) "Hello {name}"
+console.log(greeting("kuzukawa"))
+
+const names = ["kuzukawa", "yamada"]
+# console.log names.map(greeting)
+console.log names.map do(name)
+	"Hello {name}"
+
+
+setTimeout((do console.log("Hello!")), 1000)
+
+setTimeout(&, 2000) do
+	console.log("Hello!")
