@@ -30,6 +30,7 @@
 
 # console.log habitDetails.name.toLocaleUpperCase()
 
+# # -------------------------------------------------------------
 # # section 3 Conditionals
 # let num  = 4 # number of habits to complete
 # let done = 4 # number that have been completed
@@ -83,7 +84,7 @@
 # 	else
 # 		console.log "keep it up"
 
-
+# # -------------------------------------------------------------
 # # section 4 Loops
 
 # const habits = ["clean", "run", "study"]
@@ -110,29 +111,32 @@
 # 	for habit in habits
 # 		console.log "[ ] {habit}"
 
-# Section 5 Functions
+# # -------------------------------------------------------------
+# # Section 5 Functions
 
-def createHabit name, done = false
-	const timestamp = Date.now!
-	{name: name, done: false, createdAt: timestamp}
-# function createHabit(name, done = false){
-# 	const timestamp = Date.now();
-# 	return {name = name, done = false, createdAt: timestamp};
-# };
-console.log createHabit("Clean Up")
-console.log createHabit! "Study"
+# def createHabit name, done = false
+# 	const timestamp = Date.now!
+# 	{name: name, done: false, createdAt: timestamp}
+# # function createHabit(name, done = false){
+# # 	const timestamp = Date.now();
+# # 	return {name = name, done = false, createdAt: timestamp};
+# # };
+# console.log createHabit("Clean Up")
+# console.log createHabit! "Study"
 
-def check habit do if habit.done then "[x]" else "[ ]"
-def prettyHabit habit do "{check(habit)} {habit.name}"
+# def check habit do if habit.done then "[x]" else "[ ]"
+# def prettyHabit habit do "{check(habit)} {habit.name}"
 
-const myHabits = [
-	createHabit("Clean up", true)
-	createHabit("Excercise", false)
-	createHabit("Eat Healthy", true)
-]
+# const myHabits = [
+# 	createHabit("Clean up", true)
+# 	createHabit("Excercise", false)
+# 	createHabit("Eat Healthy", true)
+# ]
 
-def printHabits habits
-	for habit in habits
-		console.log prettyHabit(habit)
+# def printHabits habits
+# 	for habit in habits
+# 		console.log prettyHabit(habit)
 
-printHabits myHabits
+# printHabits myHabits
+
+
