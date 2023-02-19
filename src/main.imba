@@ -13,11 +13,11 @@ tag habit-item
 # include three <habit-item> tags inside render
 # replace the content in imba.mount with a single <habit-group>
 tag habit-group
+	prop habits = []
 	def render
 		<self>
-			<habit-item name="Clean Up">
-			<habit-item name="Excercise">
-			<habit-item name="Learn Imba">
+			for habit in habits
+				<habit-item name=habit>
 
-imba.mount <habit-group>
+imba.mount <habit-group habits=["Clean Up", "Excercise", "Learn Imba"]>
 
