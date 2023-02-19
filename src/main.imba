@@ -1,9 +1,23 @@
-# import {nanoid} from "nanoid"
-# console.log nanoid()
+class Habit
+	prop name
+	prop done? = false
+	prop createdAt
 
-import {toMs} from "./helpers"
-import {durationInMillisecondsAsWordHourAndMin as format} from "./format.js"
+	constructor name
+		name = name
+		createdAt = Date.now()
 
-console.log toMs.seconds(2)
-console.log format(1000 * 60 * 125)
-console.log format(toMs.minutes(125))
+	def toString
+		if done? then "[x] {name}" else "[ ] {name}"
+
+	# Challenge
+	# Make a method called "toggle" which toggles the value of done?
+	def toggle
+		done? = !done?
+
+const habit = new Habit("Excercise")
+
+console.log habit
+console.log habit.toString()
+habit.toggle()
+console.log habit.toString()
