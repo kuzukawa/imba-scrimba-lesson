@@ -1,18 +1,14 @@
-# Challenge:
-# If a habit is done, display it with a line through
-# use a conditional inside habit-item to check if the habit is done
-# if it is, use an <s> tag around the name, otherwise use a <div>
 tag habit-item
 	prop name = "Untitled"
 	prop done = false
 
 	<self>
-		<label>
+		<label [d:flex ai:center g:5px] >
 			<input type="checkbox" checked=done>
 			if done 
 				<s> name
 			else
-				<div> name
+				<div [c: red1]> name
 
 tag habit-group
 	prop habits = []
